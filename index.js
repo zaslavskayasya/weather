@@ -1,14 +1,14 @@
 var weatherCurrent  ;
 
+
 $.when(Weather.getCurrentWeather()).then(function(result) {
     weatherCurrent = result.current;
-    renderWeather(weatherCurrent[0]);
-
-
+    renderWeather(weatherCurrent);
 });
 
+
 function renderWeather(data){
-    /*gitconsole.log(data);*/
+    console.log(data);
     var weather =
         '<p class=""> Погода сейчас : </p>'+
         '<p class="weatherNow"> '+ weatherCurrent.temp_c +' </p>' +
