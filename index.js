@@ -1,10 +1,13 @@
 var weatherCurrent  ;
 
 
-$.when(Weather.getCurrentWeather()).then(function(result) {
-    weatherCurrent = result.current;
-    renderWeather(weatherCurrent);
+$('#block').on('click', '.take_weather' , function () {
+    $.when(Weather.getCurrentWeather()).then(function(result) {
+        weatherCurrent = result.current;
+        renderWeather(weatherCurrent);
+    });
 });
+
 
 
 function renderWeather(data){
@@ -16,3 +19,7 @@ function renderWeather(data){
         '<button class="take_weather">take_weather</button>'
     $('#block').html(weather);
 }
+
+
+
+
