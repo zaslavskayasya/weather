@@ -15,14 +15,18 @@
 
 
 <div class="container">
-    <div class="page-header text-center">
+    <div class="page-header text-center" >
         <h1>Прогноз погоды в Одессе <small>Сейчас и завтра</small></h1>
     </div>
     <div class="container-fluid">
+        <div class="row" height="200px"> </div>
         <div class="row">
-            <div class="col-md-4"></div>
+            <div class="col-md-1">
+                <button  class=" btn btn-primary"><a class="link warning" target="_self" href="">Обновить страницу</a></button>
+            </div>
+            <div class="col-md-2"></div>
             <div class="col-md-6">
-                <div id="block">
+                <div id="block" >
                     <button class="take_weather btn btn-primary">Узнать погоду сейчас</button>
                     <button class="take_forecast btn btn-primary">Узнать прогноз на завтра</button>
                 </div>
@@ -33,11 +37,17 @@
 
 
 
-
 </div>
 </body>
 <link href="style.css">
-
+<style>
+    .page-header {
+        margin-bottom: 50px;
+    }
+    a {
+        color: #fff;
+    }
+</style>
 <script
         src="https://code.jquery.com/jquery-3.1.1.js"
         integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
