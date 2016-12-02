@@ -1,13 +1,21 @@
 var weatherCurrent  ;
 var weatherForecast;
 var hum;
+var city = 'Odessa';
 
 $('#block').on('click', '.take_weather' , function () {
     $.when(Weather.getCurrentWeather()).then(function(result) {
         weatherCurrent = result.current;
         renderWeather(weatherCurrent);
     });
+    cityCurrent();
 });
+
+
+function cityCurrent(){
+    city = $("#select_city option:selected").val();
+    console.log(city);
+};
 
 function renderWeather(data) {
     console.log(data);
@@ -57,7 +65,7 @@ function renderWeather(data) {
     temperatureFeel = weatherCurrent.temp_c;
     function temperature() {
         if (temperatureFeel > 0) {
-            console.log(hum);
+            /*console.log(hum);*/
             var humidityHight = '<img  width="50px" height="50px" src="img/thermometer.svg">'
             $('#temperaturePlace').html(humidityHight);
         } else {
@@ -73,6 +81,7 @@ $('#block').on('click', '.take_forecast' , function () {
         weatherForecast = resultt.forecast.forecastday[1];
         renderForecast(weatherForecast);
     });
+    cityCurrent();
 });
 
 function renderForecast(data){

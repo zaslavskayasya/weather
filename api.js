@@ -5,7 +5,7 @@ var Weather = {
             url: "http://api.apixu.com/v1/current.json",
             data: {
                 key: '5c40c72b9b544023b9b74029162111',
-                q :  'Odessa Ukraine'
+                q :  city
             },
             success: function (result) {
                 dfd.resolve(result);
@@ -19,7 +19,7 @@ var Weather = {
             url: "http://api.apixu.com/v1/forecast.json",
             data: {
                 key: '5c40c72b9b544023b9b74029162111',
-                q :  'Odessa Ukraine',
+                q :  city,
                 days: '7'
             },
             success: function (resultt) {
