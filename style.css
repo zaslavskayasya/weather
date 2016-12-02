@@ -1,0 +1,13 @@
+.container{
+    min-width: 310px;
+}
+
+.header {
+margin-bottom: 100px;
+    color: red;
+}
+
+.wrapforecastday {
+    border: 1px solid red;
+    margin: 20px 0px;
+}
