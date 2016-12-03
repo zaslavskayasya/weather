@@ -16,26 +16,37 @@
 
 <div class="container ">
     <div class="page-header text-center" >
-        <h1>Прогноз погоды в </h1>
+        <div class=" head_row">
+            <h1 class="">Прогноз погоды в </h1>
+            <div class="select_wrap">
 
-        <select id="select_city">
-            <option value="Odessa">Odessa</option>
-            <option value="Kiev">Kiev</option>
-        </select>
+                <select  id="select_city"  class="form-control col-md-2">
+                    <option value="Odessa Ukraine">Одесса</option>
+                    <option value="Kiev">Киев</option>
+                    <option value="Kharkiv">Харьков</option>
+                    <option value="Lviv">Львов</option>
+                    <option value="Donetsk Ukraine">Донецк</option>
+                    <option value="Simferopol Ukraine">Симферополь</option>
 
-        <small>Сейчас и завтра</small>
+                </select>
+            </div>
+            <div class="smalll"> <p class="">Сейчас и завтра</p> </div>
+        </div>
+
     </div>
     <div class="container-fluid">
-        <div class="row" height="200px"> </div>
+
         <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-2 col-sm-2">
                 <button  class=" btn btn-primary"><a class="link warning" target="_self" href="">Обновить страницу</a></button>
             </div>
 
-            <div class="col-md-10 col-md-offset-1">
-                <div id="block" class="" >
-                    <button class="take_weather btn btn-primary">Узнать погоду сейчас</button>
-                    <button class="take_forecast btn btn-primary">Узнать прогноз на завтра</button>
+            <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                <div class="row">
+                     <div id="block" class="" >
+                         <button class="take_weather btn btn-primary">Узнать погоду сейчас</button>
+                         <button class="take_forecast btn btn-primary">Узнать прогноз на завтра</button>
+                     </div>
                 </div>
             </div>
 
